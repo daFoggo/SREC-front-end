@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/assets/styles/summary.css" />
+    <script src="/scripts/summary.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header class="pageHeader">
+      <img src="/assets/imgs/logo.png" width="200px" alt="">
+      <div class="rightHeader">
+        <div class="header-nav">
+          <p>Jobs</p>
+          <p>Profile & CV</p>
+          <p>About us</p>
+        </div>
+        <p>Hello, Nguyen Dinh Dat</p>
+      </div>
+    </header>
+    <div class="main">
+      <div class="top" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="charts">
+          <div>
+            <canvas id="audioChart"></canvas>
+          </div>
+          <div>
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
+        <div class="otherResults">
+          <div class="otherResultsTop">
+            <div class="personResult">
+              <span>Personality prediction</span>
+              <h1>😆</h1>
+              <h2>Extroverted</h2>
+            </div>
+            <div class="liveCodeResult">
+              <span>Live code result</span>
+              <h1>7/10</h1>
+              <h2>Cases</h2>
+            </div>
+          </div>
+          <div class="otherResultsBottom">
+            <div class="viewRecord" id="viewRecord">
+              <h3>View video record</h3>
+            </div>
+            <div class="viewText" id="viewText">
+              <h3>View text file</h3>
+            </div>
+            <div class="viewCV" id="viewCV">
+              <h3>View CV</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div id="userInfo">
+          <form id="userForm">
+            <div class="infos">
+              <div class="leftForm">
+                <div class="flexRowInput">
+                  <label for="name">Full name:</label>
+                  <input type="text" id="name" name="name" />
+                </div>
+                <div class="flexRowInput">
+                  <label for="age">Age:</label>
+                  <input type="text" id="age" name="age" />
+                </div>
+                <div class="flexRowInput">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" />
+                </div>
+                <div class="flexRowInput">
+                  <label for="edu">Education level:</label>
+                  <input type="text" id="edu" name="edu" />
+                </div>
+              </div>
+              <div class="rightForm">
+                <div class="flexColInput">
+                  <label for="language">Language proficiency:</label>
+                  <textarea
+                    name="language"
+                    id="language"
+                    cols="20"
+                    rows="8"
+                  ></textarea>
+                </div>
+                <div class="flexColInput">
+                  <label for="skills">Skills:</label>
+                  <textarea
+                    name="skills"
+                    id="skills"
+                    cols="20"
+                    rows="8"
+                  ></textarea>
+                </div>
+                <div class="flexColInput">
+                  <label for="certi">Certifications:</label>
+                  <textarea
+                    name="certi"
+                    id="certi"
+                    cols="20"
+                    rows="8"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="recordModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title">
+          <h2>Record file</h2>
+          <span class="close" id="closeRecord">&times;</span>
+        </div>
+        <ul id="recordList" class="recordList">
+          <li id="record1" class="recordItem">Record 1</li>
+          <li id="record2" class="recordItem">Record 2</li>
+          <li id="record3" class="recordItem">Record 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="textModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title">
+          <h2>Personality response</h2>
+          <span class="close" id="closeText">&times;</span>
+        </div>
+        <div class="questionList">
+          <div class="questionItem">
+            <b>Question 1</b>: I am a person with good communication skills and work very efficiently both individually and in a team. I always seek new challenges and try to think creatively when finding solutions to a specific problem. In addition to the information mentioned in my resume, I believe in my own values, vision, and actions.
+          </div>
+          <div class="questionItem">
+            <b>Question 2</b>: I have good communication skills, experience, and the necessary skills for this job role. If given the opportunity to demonstrate my abilities, I am also a hardworking and dedicated person.
+          </div>
+          <div class="questionItem">
+            <b>Question 3</b>: I believe that in the next 5 years, I will contribute a lot to the organization. I can imagine myself developing with my knowledge and my hard work. I am confident that I will help the company grow and become a reality. Therefore, I hope to be accepted into the company. Thank you very much!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="record1Modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title">
+          <h2>Record 1</h2>
+          <span class="close" id="closeRecord1">&times;</span>
+        </div>
+        <video id="record1Player" controls>
+          <source src="/assets/records/record1.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <div id="record2Modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title">
+          <h2>Record 2</h2>
+          <span class="close" id="closeRecord2">&times;</span>
+        </div>
+        <video id="record1Player" controls>
+          <source src="/assets/records/record1.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <div id="record3Modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title">
+          <h2>Record 3</h2>
+          <span class="close" id="closeRecord3">&times;</span>
+        </div>
+        <video id="record1Player" controls>
+          <source src="/assets/records/record1.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>

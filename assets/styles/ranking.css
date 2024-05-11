@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('./constant.css');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.rightHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+    border-right: 2px solid var(--white);
+}
+
+img {
+    filter: brightness(2000%);
+}
+
+.main {
+    display: flex;
+    padding: 20px;
+}
+
+.leftBar {
+    width: 30vw;
+    height: 100vh;
+    padding: 30px;
+    border-right: 2px solid #c5c8ca;
+}
+
+.leftBarTitle {
+    font-size: 1.4rem;
+    color: var(--textColor);
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.leftBarTitle input {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #c5c8ca;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: large;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.leftBarCards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #c5c8ca;
+    transition: 0.3s ease-in-out;
+    color: var(--textColor);
+}
+
+.card:hover {
+    background-color: var(--accent);
+    cursor: pointer;
+    color: var(--white);
+    transform: scale(1.02);
+}
+
+.card:first-child {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.rightBar {
+    width: 70vw;
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightBarTitle {
+    font-size: 0.9rem;
+    color: var(--white);
+    background-color: var(--accent);
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.rightBarList {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItem{
+    padding: 10px;
+    background-color: var(--white);
+    border-bottom: 2px solid #d0dcf3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemInfoText h1{
+    color: var(--textColor);
+}
+
+.itemMatchingResult{
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.moreInfo{
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+.itemInfoButton {
+    display: flex;
+    gap: 20px;
+}
+
+.itemInfoButton div{
+    cursor: pointer;   
+}
+
+.listItem:last-child{
+    border-radius: 0 0 10px 10px;
+}

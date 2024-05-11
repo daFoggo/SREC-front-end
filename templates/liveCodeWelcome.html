@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live code</title>
+    <link rel="stylesheet" href="../assets/styles/liveCodeWelcome.css" />
+    <script src="/scripts/liveCodeWelcome.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header class="pageHeader">
+      <img src="/assets/imgs/logo.png" width="200px" alt="">
+      <div class="rightHeader">
+        <div class="header-nav">
+          <p>Jobs</p>
+          <p>Profile & CV</p>
+          <p>About us</p>
+        </div>
+        <p>Hello, Nguyen Dinh Dat</p>
+      </div>
+    </header>
+
+    <!-- Upload CV section -->
+    <div class="uploadCV-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+      <div class="uploadCV">
+        <div class="uploadCV-content">
+          <form id="cvForm">
+            <div class="uploadCV-content-title">
+              <h1>Welcome to the Live Coding</h1>
+            </div>
+            <div class="uploadCV-content-para">
+                <p>We will give you some problem sets based on your level</p>
+                <p>The results will be provided when you are done and will decide can you go to the next round.</p>
+                <p>Good luck!</p>
+            </div>
+            <div class="uploadCV-content-upload">
+              <button type="submit" id="nextButton">Continue</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

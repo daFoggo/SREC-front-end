@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('./constant.css');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+.pageHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.main {
+    padding: 20px;
+}
+
+.questions-title {
+    font-weight: bolder;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.questions-title {
+    font-weight: bolder;
+    gap: 10px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.questions-list-title {
+    font-weight: bolder;
+    color: var(--textColor);
+}
+
+.question {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question select {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--backgroundColor);
+}
+
+.question span {
+    font-weight: bolder;
+    color: var(--textColor);
+}
+
+.questions-submit {
+    align-self: center;
+    width: 10%;
+    background-color: var(--accent);
+    color: var(--white);
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.questions-submit:hover {
+    background-color: var(--hoverAccent);
+    transform: scale(1.01);
+}
+
+.rightHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+    border-right: 2px solid var(--white);
+}
+
+.pageHeader img{
+    filter: brightness(2000%);
+}

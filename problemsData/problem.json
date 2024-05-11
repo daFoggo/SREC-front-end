@@ -1,0 +1,15 @@
+{
+  "level": "junior",
+  "title": "Subscribers",
+  "problem": "We conducted a survey on newspaper subscriptions. More specifically, we asked each of the N respondents whether they are subscribing to Newspaper X and Newspaper Y. Given the counts A and B of respondents subscribing to Newspaper X and Newspaper Y respectively, find the maximum and minimum possible number of respondents subscribing to both newspapers.",
+  "input": {
+    "description": "Input is given from Standard Input in the following format: N, A, B",
+    "format": "N A B"
+  },
+  "output": {
+    "description": "Print the maximum possible number and the minimum possible number of respondents subscribing to both newspapers, separated by a space."
+  },  
+  "constraints": ["1 ≤ N ≤ 100", "0 ≤ A, B ≤ N"],
+  "sampleInput": ["10 3 5"],
+  "sampleOutput": ["3 0"]
+}
