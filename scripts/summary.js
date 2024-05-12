@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Predicted personality": "Serious"
     }
 
-    let labels = [];
+/*     let labels = [];
     let data = [];
     for (let i = 0; i <= 180; i += 2) {
         labels.push(i.toFixed(2) + 's');
@@ -72,7 +72,42 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
             }
         }
-    });
+    }); */
+
+    let spiderChartCanvas = document.getElementById('spiderChart').getContext('2d');
+  let spiderChart = new Chart(spiderChartCanvas, {
+    type: 'radar',
+    data: {
+        labels: ["Resume", "Coding", "Language", "Personality"],
+        datasets: [{
+            label: "Overall score",
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1,
+            data: [7, 6, 5, 10],
+        }]
+    },
+    options: {
+        scale: {
+            r: {
+                beginAtZero: true,
+                min: 0,
+                max: 10,
+                origin: 0,
+                stepSize: 1
+            }
+        },
+        layout: {
+            padding: {
+                left: 20,
+                right: 20,
+                top: 20,
+                bottom: 20
+            }
+        }
+    }
+});
+
 
     function renderData(data) {
         let name = document.getElementById('name');

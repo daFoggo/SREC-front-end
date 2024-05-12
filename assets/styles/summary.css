@@ -40,28 +40,35 @@ body {
 .top {
     display: flex;
     width: 100vw;
-    height: 40vh;
+    height: 60vh;
 }
 
 .charts {
-    flex: 0.7;
+    flex: 0.6;
     display: flex;
     gap: 20px;
     padding: 20px;
-    height: 100%;
+    height: 60vh;
 }
 
 .charts div {
-    width: 50%;
+    width: 100%;
     background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
+#spiderChart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .otherResults {
     margin-top: 20px;
-    flex: 0.3;
+    flex: 0.4;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
