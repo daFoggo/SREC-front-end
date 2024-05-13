@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/signIn.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <header class="pageHeader">
+        <img src="/assets/imgs/logo.png" width="200px" alt="">
+        <div class="rightHeader">
+          <div class="header-nav">
+            <p>Jobs</p>
+            <p>Profile & CV</p>
+            <p>About us</p>
+          </div>
+          <p>Hello, Nguyen Dinh Dat</p>
+        </div>
+      </header>
+    <div class="wrapper"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active">Sign In</h2>
+        <h2 class="inactive underlineHover">Sign Up</h2>
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img
+            src="../assets/imgs/userIcon.png"
+            id="icon"
+            alt="User Icon"
+          />
+        </div>
+
+        <!-- Login Form -->
+        <form>
+          <input
+            type="text"
+            id="login"
+            class="fadeIn second"
+            name="login"
+            placeholder="Login"
+          />
+          <input
+            type="text"
+            id="password"
+            class="fadeIn third"
+            name="login"
+            placeholder="Password"
+          />
+          <input type="submit" class="fadeIn fourth" value="Log In" />
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+    <!--Script-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
