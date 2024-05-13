@@ -106,7 +106,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
-    let showInfo = document.getElementById("showInfo");
     let infoModal = document.getElementById("infoModal");
     let closeButton = document.getElementById("close-btn");
 
@@ -119,9 +118,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         let moreInfo = moreInfoList[i];
         moreInfo.addEventListener("click", () => {
             let candidateId = moreInfo.id.replace("moreInfo", "");
-            console.log(candidateId);
             let candidate = candidateData[candidateId];
 
+            let candidate_name = document.getElementById("candidate_name");
             let candidate_matching_skills_modal = document.getElementById("candidate_matching_skills_modal");
             let candidate_contact = document.getElementById("candidate_contact");
             let candidate_degree = document.getElementById("candidate_degree");
@@ -130,6 +129,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             let candidate_major = document.getElementById("candidate_major");
             let candidate_experience = document.getElementById("candidate_experience");
 
+            candidate_name.textContent = candidate.candidate_name;
             candidate_matching_skills_modal.value = `${(candidate.candidate_matching_skills * 1.9).toFixed(2)}%`;
             candidate_contact.value = candidate.candidate_contact;
             candidate_degree.textContent = candidate.candidate_degree;
