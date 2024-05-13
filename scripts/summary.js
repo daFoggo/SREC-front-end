@@ -10,39 +10,39 @@ document.addEventListener("DOMContentLoaded", function () {
         "Predicted personality": "Serious"
     }
 
-/*     let labels = [];
-    let data = [];
-    for (let i = 0; i <= 180; i += 2) {
-        labels.push(i.toFixed(2) + 's');
-        data.push(Math.sin(2 * Math.PI * i) + Math.random() * 0.75 - 0.25);
-    }
-
-    let audioData = {
-        labels: labels,
-        datasets: [{
-            label: 'Audio Data',
-            data: data,
-            fill: false,
-            borderColor: '#2f80f3',
-            tension: 0.1
-        }]
-    };
-
-    let ctx = document.getElementById('audioChart').getContext('2d');
-    let myChart = new Chart(ctx, {
-        type: 'line',
-        data: audioData,
-        options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Audio Analysis Data'
+    /*     let labels = [];
+        let data = [];
+        for (let i = 0; i <= 180; i += 2) {
+            labels.push(i.toFixed(2) + 's');
+            data.push(Math.sin(2 * Math.PI * i) + Math.random() * 0.75 - 0.25);
+        }
+    
+        let audioData = {
+            labels: labels,
+            datasets: [{
+                label: 'Audio Data',
+                data: data,
+                fill: false,
+                borderColor: '#2f80f3',
+                tension: 0.1
+            }]
+        };
+    
+        let ctx = document.getElementById('audioChart').getContext('2d');
+        let myChart = new Chart(ctx, {
+            type: 'line',
+            data: audioData,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Audio Analysis Data'
+                    }
                 }
             }
-        }
-    });
-
+        });
+        */
     const lineChartCanvas = document.getElementById('lineChart');
     const lineChart = new Chart(lineChartCanvas, {
         type: 'line',
@@ -72,41 +72,89 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
             }
         }
-    }); */
+    });
 
-    let spiderChartCanvas = document.getElementById('spiderChart').getContext('2d');
-  let spiderChart = new Chart(spiderChartCanvas, {
-    type: 'radar',
-    data: {
-        labels: ["Resume", "Coding", "Language", "Personality"],
-        datasets: [{
-            label: "Overall score",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1,
-            data: [7, 6, 5, 10],
-        }]
-    },
-    options: {
-        scale: {
-            r: {
-                beginAtZero: true,
-                min: 0,
-                max: 10,
-                origin: 0,
-                stepSize: 1
-            }
+
+    let pieChartCanvas = document.getElementById('pieChart').getContext('2d');
+    let pieChart = new Chart(pieChartCanvas, {
+        type: 'pie',
+        data: {
+            labels: ['Extroversion', 'Neurotic', 'Agreeable', 'Conscientious', 'Open'],
+            datasets: [{
+                label: 'Personality Traits',
+                data: [13, 53, 0, 11, 23],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
         },
-        layout: {
-            padding: {
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Personality Traits'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            let label = context.label || '';
+                            let value = context.parsed || 0;
+                            let percent = Math.round((value / context.dataset.data.reduce((a, b) => a + b, 0)) * 100);
+                            return label + ': ' + percent + '%';
+                        }
+                    }
+                }
             }
         }
-    }
-});
+    });
+
+
+    let spiderChartCanvas = document.getElementById('spiderChart').getContext('2d');
+    let spiderChart = new Chart(spiderChartCanvas, {
+        type: 'radar',
+        data: {
+            labels: ["Resume", "Coding", "Language", "Personality"],
+            datasets: [{
+                label: "Overall score",
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                data: [7, 6, 5, 7],
+            }]
+        },
+        options: {
+            scale: {
+                r: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 10,
+                    origin: 0,
+                    stepSize: 1
+                }
+            },
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
 
 
     function renderData(data) {

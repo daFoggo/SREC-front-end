@@ -52,18 +52,11 @@ body {
 }
 
 .charts div {
-    width: 100%;
+    width: 50%;
     background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-#spiderChart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .otherResults {
@@ -83,7 +76,7 @@ body {
 }
 
 .otherResultsTop div{
-    flex: 0.5;
+    flex: 1;
     background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
@@ -91,9 +84,8 @@ body {
     color: var(--textColor);
     cursor: pointer;    
     display: flex;
-    flex-direction: column;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
