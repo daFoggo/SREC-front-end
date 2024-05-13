@@ -167,3 +167,106 @@ img {
 .listItem:last-child {
     border-radius: 0 0 10px 10px;
 }
+
+.modalContainer{
+    position: fixed; /* Change from absolute to fixed */
+    top: 0; /* Place the modal at the top of the viewport */
+    left: 0; /* Place the modal at the left of the viewport */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10
+}
+
+.modalContainer .modalBox{
+    min-width: 50%;
+    max-width: 80%;
+    min-height: 60%;
+    max-height: 90%;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.modalBox h1{
+    color: var(--textColor);
+    line-height: 1;
+}
+
+.modalBox .close-btn{
+    width: 20%;
+    height: 45px;
+    align-self: flex-end;
+    background-color: var(--accent);
+    color: var(--white);
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.modalContainer.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: .4s ease;
+}
+
+.modalContainer.active .modalBox{
+    transform: scale(1);
+    transition: .4s ease;
+    transition-delay: .25s;
+}
+
+.modalBody{
+    background-color: var(--backgroundColor);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.eachInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.eachInfo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c8ca;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: large;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.eachInfo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c8ca;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: large;
+    font-weight: bold;
+    color: var(--textColor);
+}

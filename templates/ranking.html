@@ -51,16 +51,44 @@
 
   <div class="modalContainer" id="infoModal">
     <div class="modalBox">
-      <h1>Hello world</h1>
+      <h1 id="candidate_name"></h1>
+      <div class="modalBody">
+        <div class="eachInfo">
+          <h3>Matching skills percent : </h3>
+          <input id="candidate_matching_skills"></input>
+        </div> 
+        <div class="eachInfo">
+          <h3>Contact : </h3>
+          <input id="candidate_contact"></input>
+        </div> 
+        <div class="eachInfo">
+          <h3>Degree : </h3>
+          <textarea id="candidate_degree"></textarea>
+        </div> 
+        <div class="eachInfo">
+          <h3>Skills : </h3>
+          <textarea id="candidate_skills"></textarea>
+        </div> 
+        <div class="eachInfo">
+          <h3>Language : </h3>
+          <textarea id="candidate_language"></textarea>
+        </div> 
+        <div class="eachInfo">
+          <h3>Major : </h3>
+          <input id="candidate_major"></input>
+        </div> 
+        <div class="eachInfo">
+          <h3>Experience : </h3>
+          <textarea id="candidate_experience"></textarea>
+        </div>
+      </div>
+      <button class="close-btn" id="close-btn">Close</button>
     </div>
   </div>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-    document.addEventListener('DOMContentLoaded', function () {
-      MicroModal.init();
-    });
 
   </script>
 </body>

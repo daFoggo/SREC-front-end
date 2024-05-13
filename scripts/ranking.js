@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", async function () {
     let candidateData = await fetch("../candidateData/ranked_candidates.json")
         .then(response => response.json());
-        
+
     let container = document.getElementById("candidateList");
-    
+
     let indexCount = 1;
     for (let candidateId in candidateData) {
-        
+
         if (candidateData.hasOwnProperty(candidateId)) {
             let candidate = candidateData[candidateId];
-            
+
             let listItem = document.createElement("div");
             listItem.classList.add("listItem");
 
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             let moreInfo = document.createElement("p");
             moreInfo.textContent = "View detailed information";
             moreInfo.classList.add("moreInfo");
+            moreInfo.id = `moreInfo${indexCount}`
 
             itemInfoText.appendChild(candidateName);
             itemInfoText.appendChild(roundEvaluation);
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             path21.setAttribute("d", "M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z");
             let path22 = document.createElementNS("http://www.w3.org/2000/svg", "path");
             path22.setAttribute("d", "M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-4.854-1.354a.5.5 0 0 0 0 .708l.647.646-.647.646a.5.5 0 0 0 .708.708l.646-.647.646.647a.5.5 0 0 0 .708-.708l-.647-.646.647-.646a.5.5 0 0 0-.708-.708l-.646.647-.646-.647a.5.5 0 0 0-.708 0")
-            
+
             rejectSVG.appendChild(path21);
             rejectSVG.appendChild(path22);
 
@@ -91,17 +92,29 @@ document.addEventListener("DOMContentLoaded", async function () {
             itemMatchingResult.classList.add("itemMatchingResult");
             itemMatchingResult.setAttribute("id", "candidate_matching_skills");
             itemMatchingResult.textContent = `${(candidate.candidate_matching_skills * 1.9).toFixed(2)}%`;
-            
+
             if (indexCount <= (Object.keys(candidateData).length * 0.75)) {
-                itemMatchingResult.style.color = "#2f80f3"; 
+                itemMatchingResult.style.color = "#2f80f3";
             } else {
                 itemMatchingResult.style.color = "#ff0000";
             }
+
+            moreInfo.addEventListener("click", () => {
+                infoModal.classList.add("active");
+            });
+
+            let infoModal = document.getElementById("infoModal");
+            let closeButton = document.getElementById("close-btn");
+
+            closeButton.addEventListener("click", () => {
+                infoModal.classList.remove("active");
+            });
+
             listItem.appendChild(itemMatchingResult);
             container.appendChild(listItem);
-            
-            indexCount++;
-        }
 
+            indexCount++;
+
+        }
     }
 });
