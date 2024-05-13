@@ -120,6 +120,8 @@ img {
 .rightBarList {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
 }
 
 .listItem{

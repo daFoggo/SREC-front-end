@@ -1,0 +1,92 @@
+{
+    "c6acdd08-5ec1-4a20-b49b-b729abd5f2ae": {
+        "candidate_name": "Jack Johnson",
+        "candidate_matching_skills": 40.76,
+        "candidate_contact": "jack.johnson@gmail.com",
+        "candidate_degree": "Bachelor of Science",
+        "candidate_skills": "Data Visualisation, Data Migration, Analytical Problem-Solving, Domain Knowledge, Project Management, Software Development Lifecycle (SDLC), Confidential Power BI",
+        "candidate_language": "English (Native), Afrikaans (Native), Arabic (Conversational)",
+        "candidate_major": "Information Technology (Data Science)",
+        "candidate_experience": "Azure Data Engineer at Resume Worded, Polyhire, and Growthsi; Business Analyst at ABC Company; Systems Engineer at XYZ Company; Server Team Data Engineer (Internship) at ABC"
+    },
+    "da174fdd-32a3-4b88-8d76-dd4e26661ed1": {
+        "candidate_name": "F I R S T  L A S T",
+        "candidate_matching_skills": 40.72,
+        "candidate_contact": "first.last@resumeworded.com",
+        "candidate_degree": "Bachelor of Engineering",
+        "candidate_skills": "Advanced in SQL, PHP, JavaScript, HTML/CSS; Proficient in MATLAB, Python",
+        "candidate_language": "Fluent in French, English; Conversational Proficiency in Italian, German",
+        "candidate_major": "Computer Science",
+        "candidate_experience": "Data Engineering Intern at RESUME WORDED & CO., Marketing Intern at EXCITING COMPANY"
+    },
+    "fee60645-119a-409e-8bc6-81e81f99a3e9": {
+        "candidate_name": "First Last",
+        "candidate_matching_skills": 40.6,
+        "candidate_contact": "professionalemail@resumeworded.com",
+        "candidate_degree": "Bachelor of Engineering",
+        "candidate_skills": "AWS Kinesis (Advanced), DynamoDB (Experienced), AWS Lambda, Redshift Spectrum",
+        "candidate_language": "English (Native), Czech (Fluent), Russian (Conversational)",
+        "candidate_major": "Systems Design",
+        "candidate_experience": "AWS Data Engineer with 11 years of experience in distributed computing, data mining, and machine learning."
+    },
+    "11f5c846-3ccd-4b7f-bdee-dcba53c6fb6e": {
+        "candidate_name": "First Last",
+        "candidate_matching_skills": 38.61,
+        "candidate_contact": "professional@gmail.com",
+        "candidate_degree": "Associate of Applied Science",
+        "candidate_skills": "SQL, ETL, Hadoop, Spark, Grafana, Kibana, Tableau",
+        "candidate_language": "none",
+        "candidate_major": "Information Technology",
+        "candidate_experience": "Big Data Engineer, SQL DBA, IT Security Engineer, Software Trainer, Mobile Tester"
+    },
+    "fb5d46b4-f233-4d92-85e4-cee52542d3cd": {
+        "candidate_name": "First Last",
+        "candidate_matching_skills": 38.25,
+        "candidate_contact": "first.last@gmail.com",
+        "candidate_degree": "Bachelor of Science",
+        "candidate_skills": "Data Warehousing, Integration, Apache Kafka Streaming, Scripting, Data Pipelines, Programming Techniques, Distributed Databases, Google BigQuery, Extract, Transform, Load (ETL), PostgreSQL, MongoDB, Apache Kafka, Snowflake",
+        "candidate_language": "English (Native), Romanian (Native), Spanish (Conversational)",
+        "candidate_major": "Mathematics",
+        "candidate_experience": "Data Engineer, Analytics Consultant, ETL Developer, Cloud Architect, Big Data Developer, Business Intelligence Analyst"
+    },
+    "03d0ca41-ca3c-4451-b6e6-2624e037a991": {
+        "candidate_name": "LUONG VAN KHANG",
+        "candidate_matching_skills": 37.59,
+        "candidate_contact": "example@gmail.com",
+        "candidate_degree": "none",
+        "candidate_skills": "Python, Django, FastAPI, Javascript, Docker, Postgres, MongoDB, SQLalchemy, CI/CD, Pandas, ReactJs, Ubuntu, VSCode",
+        "candidate_language": "Intermediate English",
+        "candidate_major": "Mechatronics",
+        "candidate_experience": "1 year working experience as Design Engineer at Meiko Electronic VietNam and Brand Engineer at TOA Electronic VietNam"
+    },
+    "9b79605b-3fdf-42f0-934b-964d8062b89a": {
+        "candidate_name": "First Last",
+        "candidate_matching_skills": 35.86,
+        "candidate_contact": "professional@gmail.com",
+        "candidate_degree": "none",
+        "candidate_skills": "SQL, ETL, Data Quality Analysis",
+        "candidate_language": "none",
+        "candidate_major": "none",
+        "candidate_experience": "Data Warehouse Engineer at Resumeworded, New York; Data Quality Analyst at Polyhire, London; SQL Programmer at Growthsi, London; Software Tester at ABC Company, London; Software Support Engineer at XYZ Company, London"
+    },
+    "4482d407-9172-4d52-99d1-39095b34d4ab": {
+        "candidate_name": "Your Name",
+        "candidate_matching_skills": 35.58,
+        "candidate_contact": "yourname@gmail.com",
+        "candidate_degree": "Master of Arts in Mathematics",
+        "candidate_skills": "Tools and Languages Python, Git, L ATEX, MarkDown, PHP\nQuantitative Research Mathematical optimization, Mathematical Modeling, R, MySQL",
+        "candidate_language": "English, Cantonese (fluent speaker), Chinese (reading and writing)",
+        "candidate_major": "Mathematics",
+        "candidate_experience": "ROLE / PROJECT A MMM YYYY \u2014 Present\ncompany A somewhere, state\n\u2022Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\u2022Suspendisse pretium elit quis ullamcorper ultricies.\n\u2022Morbi a nisl sit amet massa ultricies fermentum.\n\u2022Sed a diam et turpis tempor venenatis eget eget ipsum.\n\u2022Vestibulum fermentum justo vitae aliquet accumsan.\nROLE / PROJECT B MMM YYYY \u2014 MMM YYYY\ncompany B somewhere, state\n\u2022Aenean semper felis et viverra eleifend.\n\u2022Integer aliquam odio id tellus sollicitudin, ut pellentesque elit blandit.\n\u2022Vestibulum iaculis quam ac nibh tincidunt rutrum.\nROLE / PROJECT C MMM YYYY \u2014 MMM YYYY\ncompany C somewhere, state\n\u2022Donec volutpat turpis et placerat pharetra.\n\u2022Sed sit amet sem facilisis, scelerisque lectus aliquam, accumsan purus.\n\u2022Aliquam at urna congue dolor luctus sodales.\n\u2022Quisque vitae tortor at elit tincidunt molestie sed ac quam.\nROLE / PROJECT D MMM YYYY \u2014 MMM YYYY\ncompany D somewhere, state\n\u2022Vestibulum accumsan massa quis dignissim faucibus.\n\u2022Maecenas suscipit mi ut ullamcorper pharetra.\n\u2022In vitae ligula tristique, iaculis tortor in, egestas magna.\n\u2022In fringilla purus malesuada lectus imperdiet pulvinar.\n\u2022Nulla eu dolor congue, mollis dui a, eleifend purus."
+    },
+    "b13fea82-59af-4554-b88e-381550302e22": {
+        "candidate_name": "First Last",
+        "candidate_matching_skills": 34.81,
+        "candidate_contact": "first.m.last@resumeworded.com",
+        "candidate_degree": "Master of Data Science",
+        "candidate_skills": "Java MapReduce, Hive, Avro, Shell Scripting, Cloudera Search, Hadoop, SAP ECC",
+        "candidate_language": "French (intermediate), Chinese (intermediate)",
+        "candidate_major": "Computer Science",
+        "candidate_experience": "Senior Data Engineer, Architect/Lead Engineer, Technology Analyst, Database Developer"
+    }
+}
