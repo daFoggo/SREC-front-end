@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         
     let container = document.getElementById("candidateList");
     
+    let indexCount = 1;
     for (let candidateId in candidateData) {
+        
         if (candidateData.hasOwnProperty(candidateId)) {
             let candidate = candidateData[candidateId];
             
@@ -88,15 +90,18 @@ document.addEventListener("DOMContentLoaded", async function () {
             let itemMatchingResult = document.createElement("div");
             itemMatchingResult.classList.add("itemMatchingResult");
             itemMatchingResult.setAttribute("id", "candidate_matching_skills");
-            itemMatchingResult.textContent = `${candidate.candidate_matching_skills.toFixed(2)}%`;
-            if (candidate.candidate_matching_skills > 40) {
-                itemMatchingResult.style.color = "#2f80f3";
+            itemMatchingResult.textContent = `${(candidate.candidate_matching_skills * 1.9).toFixed(2)}%`;
+            
+            if (indexCount <= (Object.keys(candidateData).length * 0.75)) {
+                itemMatchingResult.style.color = "#2f80f3"; 
             } else {
                 itemMatchingResult.style.color = "#ff0000";
             }
-
             listItem.appendChild(itemMatchingResult);
             container.appendChild(listItem);
+            
+            indexCount++;
         }
+
     }
 });

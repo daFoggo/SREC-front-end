@@ -8,6 +8,7 @@
   <script src="/scripts/ranking.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
+</head>
 <body>
   <header class="pageHeader">
     <img src="/assets/imgs/logo.png" width="200px" alt="">
@@ -47,9 +48,14 @@
       </div>
     </div>
   </div>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+    document.addEventListener('DOMContentLoaded', function () {
+      MicroModal.init();
+    });
+
   </script>
 </body>
 </html>
