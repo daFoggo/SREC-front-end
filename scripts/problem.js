@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function () {
-    let problem = await fetch('../problemsData/problem.json')
+    let problem = await fetch('../problemsData/problemC.json')
         .then(response => response.json());
 
     let title = document.getElementById('title');
@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     let outputDesc = document.getElementById('outputDesc');
     outputDesc.innerText = problem.output.description;
+
+    let outputFormat = document.getElementById('outputFormat');
+    outputFormat.value = problem.output.format;
 
     let sampleInput = document.getElementById('sampleInput');
     sampleInput.innerText = problem.sampleInput;

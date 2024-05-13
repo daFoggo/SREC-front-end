@@ -7,7 +7,8 @@
     "format": "N A B"
   },
   "output": {
-    "description": "Print the maximum possible number and the minimum possible number of respondents subscribing to both newspapers, separated by a space."
+    "description": "Print the maximum possible number and the minimum possible number of respondents subscribing to both newspapers, separated by a space.",
+    "format" : ""
   },  
   "constraints": ["1 ≤ N ≤ 100", "0 ≤ A, B ≤ N"],
   "sampleInput": ["10 3 5"],

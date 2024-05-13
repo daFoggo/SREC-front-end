@@ -1,0 +1,20 @@
+{
+  "level": "junior",
+  "title": "Equal Strings",
+  "problem": "You are given three strings A, B, and C. Each of these is a string of length N consisting of lowercase English letters. Your objective is to make all three strings equal. You can repeatedly perform an operation where you choose one of the strings A, B, or C, and specify an integer i between 1 and N (inclusive) to change the i-th character from the beginning of the chosen string to some other lowercase English letter. What is the minimum number of operations required to achieve the objective?",
+  "input": {
+    "description": "Input is given from Standard Input in the following format: N, A, B, C",
+    "format": "N\nA\nB\nC"
+  },
+  "output": {
+    "description": "Print the minimum number of operations required.",
+    "format": "A single integer representing the minimum number of operations."
+  },
+  "constraints": [
+    "1 ≤ N ≤ 100",
+    "Each of the strings A, B, and C is a string of length N.",
+    "Each character in each of the strings A, B, and C is a lowercase English letter."
+  ],
+  "sampleInput": "4\nwest\neast\nwait",
+  "sampleOutput": "3"
+}

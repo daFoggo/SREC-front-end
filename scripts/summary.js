@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
             labels: ["Resume", "Coding", "Language", "Personality"],
             datasets: [{
                 label: "Overall score",
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)   ',
+                borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1,
                 data: [7, 6, 5, 7],
             }]
@@ -151,6 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     right: 20,
                     top: 20,
                     bottom: 20
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Spider Chart'
                 }
             }
         }

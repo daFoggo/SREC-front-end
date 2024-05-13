@@ -1,0 +1,17 @@
+{
+    "level": "junior",
+    "title": "Maximize Happiness",
+    "problem": "There are N dishes of cuisine placed in front of Takahashi and Aoki. Each dish has a certain amount of happiness points associated with it for Takahashi and Aoki. Starting from Takahashi, they alternately choose one dish and eat it until there are no more dishes. Find the difference between the sum of happiness points Takahashi earns and the sum of happiness points Aoki earns.",
+    "input": {
+      "description": "Input is given from Standard Input in the following format: N followed by N lines each containing two integers A_i and B_i separated by a space.",
+      "format": "N\nA1 B1\nA2 B2\n...\nAN BN"
+    },
+    "output": {
+      "description": "Print the difference between the sum of happiness points Takahashi earns and the sum of happiness points Aoki earns.",
+      "format": "A single integer representing the difference."
+    },  
+    "constraints": ["1 ≤ N ≤ 10^5", "1 ≤ Ai, Bi ≤ 10^9"],
+    "sampleInput": "3\n10 10\n20 20\n30 30",
+    "sampleOutput": "20"
+  }
+  
