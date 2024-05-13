@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             let moreInfo = document.createElement("p");
             moreInfo.textContent = "View detailed information";
             moreInfo.classList.add("moreInfo");
-            moreInfo.id = `moreInfo${indexCount}`
+            moreInfo.id = `moreInfo${candidateId}`;
 
             itemInfoText.appendChild(candidateName);
             itemInfoText.appendChild(roundEvaluation);
@@ -99,22 +99,48 @@ document.addEventListener("DOMContentLoaded", async function () {
                 itemMatchingResult.style.color = "#ff0000";
             }
 
-            moreInfo.addEventListener("click", () => {
-                infoModal.classList.add("active");
-            });
 
-            let infoModal = document.getElementById("infoModal");
-            let closeButton = document.getElementById("close-btn");
-
-            closeButton.addEventListener("click", () => {
-                infoModal.classList.remove("active");
-            });
 
             listItem.appendChild(itemMatchingResult);
             container.appendChild(listItem);
-
-            indexCount++;
-
         }
+    }
+
+    let showInfo = document.getElementById("showInfo");
+    let infoModal = document.getElementById("infoModal");
+    let closeButton = document.getElementById("close-btn");
+
+    closeButton.addEventListener("click", () => {
+        infoModal.classList.remove("active");
+    });
+
+    let moreInfoList = document.getElementsByClassName("moreInfo");
+    for (let i = 0; i < moreInfoList.length; i++) {
+        let moreInfo = moreInfoList[i];
+        moreInfo.addEventListener("click", () => {
+            let candidateId = moreInfo.id.replace("moreInfo", "");
+            console.log(candidateId);
+            let candidate = candidateData[candidateId];
+
+            let candidate_matching_skills_modal = document.getElementById("candidate_matching_skills_modal");
+            let candidate_contact = document.getElementById("candidate_contact");
+            let candidate_degree = document.getElementById("candidate_degree");
+            let candidate_skills = document.getElementById("candidate_skills");
+            let candidate_language = document.getElementById("candidate_language");
+            let candidate_major = document.getElementById("candidate_major");
+            let candidate_experience = document.getElementById("candidate_experience");
+
+            candidate_matching_skills_modal.value = `${(candidate.candidate_matching_skills * 1.9).toFixed(2)}%`;
+            candidate_contact.value = candidate.candidate_contact;
+            candidate_degree.textContent = candidate.candidate_degree;
+            candidate_skills.textContent = candidate.candidate_skills;
+            candidate_language.textContent = candidate.candidate_language;
+            candidate_major.value = candidate.candidate_major;
+            candidate_experience.textContent = candidate.candidate_experience;
+
+            infoModal.classList.add("active");
+        });
+
+
     }
 });
