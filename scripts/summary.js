@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             labels: ['Happy', 'Sad', 'Angry', 'Fearful', 'Surprised'],
             datasets: [{
                 label: 'Emotion Data',
-                data: [Math.random() * 40, Math.random() * 20, Math.random() * 1, Math.random() * 20, Math.random() * 20],
+                data: [20.31, 9.71, 32.89, 10.06, 26.49],
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1
@@ -65,11 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             },
             scales: {
-                yAxes: [{
+                y: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 100,
+                    stepSize: 10,
                     ticks: {
-                        beginAtZero: true
+                        callback: function (value) {
+                            return value + '%';
+                        }
                     }
-                }]
+                }
             }
         }
     });

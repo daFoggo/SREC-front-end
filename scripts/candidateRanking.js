@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    let candidateData = await fetch("../candidateData/ranked_candidates.json")
+    let candidateData = await fetch("../candidateData/cvMatching.json")
         .then(response => response.json());
 
     let container = document.getElementById("candidateList");
@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             listItem.appendChild(itemMatchingResult);
             container.appendChild(listItem);
         }
+        indexCount++;
     }
 
     let infoModal = document.getElementById("infoModal");
